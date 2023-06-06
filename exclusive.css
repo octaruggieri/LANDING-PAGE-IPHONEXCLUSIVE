@@ -387,6 +387,14 @@ form{
     color: #000000;
 }
 
+html {
+    scroll-behavior: smooth;
+}
+
+.section[id] {
+    scroll-margin-top: 70vh;
+}
+
 @media(max-width:991px) {
     .menu {
         padding: 30px;
