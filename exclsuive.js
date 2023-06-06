@@ -12,3 +12,13 @@ document.getElementById('myForm').addEventListener('submit', function(event) {
     
     window.location.href = whatsappLink;
 });
+
+
+// Obtener el elemento del botón
+var comprarBtn = document.getElementById("comprar-btn");
+
+// Agregar un evento de clic al botón
+comprarBtn.addEventListener("click", function() {
+  // Aquí puedes agregar la acción que deseas realizar al hacer clic en el botón
+  // Por ejemplo, redireccionar a una página de compra o realizar alguna otra acción
+  window.location.href = "https://www.instagram.com/iphonexclusivecba/";});

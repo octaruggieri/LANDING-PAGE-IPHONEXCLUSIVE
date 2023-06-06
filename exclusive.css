@@ -21,7 +21,7 @@
 html{
     font-size: 20px;
     font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-    background-color: #ffffff;
+    background-color: rgb(5, 5, 5);
 }
 
 p{
@@ -105,7 +105,7 @@ p{
 .header-txt h1{
     font-size: 100px;
     line-height: 70px;
-    color: #fefcfb;
+    color: #ffffff;
     margin-bottom: 15px;
 }
 
@@ -118,7 +118,7 @@ p{
 .btn-1 {
     display: inline-block;
     padding: 5px 20px ;
-    background-color: #7e3b3b;
+    background-color: #af3e3e;
     color: #fefcfb;
     border-radius: 25px;
     font-size: 18px;
@@ -127,7 +127,7 @@ p{
 }
 
 .btn-1:hover{
-    background-color: #9b3939;
+    background-color: #643535;
 }
 
 .direction {
@@ -138,10 +138,10 @@ p{
 
 .direction.container p{
     font-family: 'Bebas Neue', sans-serif;
-    color: #ffffff;
-    border: 1px solid #000000; /* Cambia el color y el grosor del borde según tus preferencias */
+    color: #000000;
+    border: 1px solid #555555; /* Cambia el color y el grosor del borde según tus preferencias */
     padding: 12px;
-    background-color: #000000;
+    background-color: #ffffff;
     border-radius: 20px;
     font-size: 20px;
    
@@ -170,12 +170,12 @@ p{
 }
 
 .about-txt h2{
-    color: #000000;
+    color: #ffffff;
 }
 
 .about-txt p{
     font-size: 19px;
-    color: #000000;
+    color: #ffffff;
     margin-bottom: 6px;
 }
 
@@ -198,7 +198,7 @@ h2 {
 
 .information-1 a {
     text-decoration: none;
-    color: #000000;
+    color: #ffffff;
 }
 
 
@@ -301,7 +301,7 @@ h2 {
 }
 
 .txt h3{
-    color: #fefcfb;
+    color: #000000;
     font-size: 35px;
 }
 
@@ -329,7 +329,7 @@ h2 {
 
 
 .footer-form h2 {
-    color: #000000;
+    color: #ffffff;
     font-size: 40px;
     margin-top: 20px;
     margin-right: 150px;
@@ -347,16 +347,17 @@ form{
 }
 
 .campo {
-    background-color: #201f23;
+    background-color: #cacaca;
     padding: 17px 35px;
     outline: none;
-    color: #E0E0E0;
+    color: #000000;
     border: 0;
     margin-bottom: 10px;
+    border-radius: 30px;
 }
 
 .campo::placeholder {
-    color: #E0E0E0;
+    color: #000000;
 }
 
 .btn-2{
@@ -369,7 +370,7 @@ form{
 }
 
 .footer-txt h3 {
-    color: #000000;
+    color: #ffffff;
     font-size: 30px;
     margin: 0 100px 20px 0;
 }
@@ -377,7 +378,7 @@ form{
 .footer-txt p{
     margin-bottom: 25px;
     font-size: 20px;
-    color: #000000;
+    color: #ffffff;
 }
 
 .footer-2 p{
