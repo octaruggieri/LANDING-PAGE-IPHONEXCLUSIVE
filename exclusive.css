@@ -396,6 +396,9 @@ html {
     scroll-margin-top: 70vh;
 }
 
+
+
+/* RESPONSIVE PARA TODAS LAS PANTALLAS */
 @media(max-width:991px) {
     .menu {
         padding: 30px;
@@ -539,6 +542,8 @@ html {
     }
   }
 
+
+/* RESPONSIVE PEQUEÑO */
   @media (max-width: 360px) {
     .menu {
         padding: 15px;
@@ -654,6 +659,171 @@ html {
 
     .footer-2 p {
         text-align: center;
+    }
+}
+
+
+
+/* RESPONSIVE MEDIO */
+@media (max-width: 720px) {
+    .menu {
+        padding: 20px;
+    }
+
+    .menu label {
+        display: initial;
+    }
+
+    .menu .navbar {
+        position: absolute;
+        top: 100%;
+        left: 0;
+        right: 0;
+        background-color: #000000;
+        display: none;
+    }
+
+    .menu .navbar ul li {
+        width: 100%;
+    }
+
+    #menu:checked ~ .navbar {
+        display: initial;
+    }
+
+    .header {
+        min-height: 0vh;
+    }
+
+    .header-content {
+        padding: 80px 20px;
+    }
+
+    .header-txt {
+        width: 100%;
+        text-align: center;
+    }
+
+    .header-txt h1 {
+        font-size: 60px;
+        line-height: 70px;
+    }
+
+    .direction {
+        flex-direction: column;
+        text-align: center;
+        padding: 20px;
+    }
+
+    .direction p {
+        margin-bottom: 15px;
+    }
+
+    .about {
+        padding: 0 20px 20px 20px;
+        flex-direction: column;
+    }
+
+    .about-txt {
+        width: 100%;
+        text-align: center;
+        margin-bottom: 20px;
+    }
+
+    .about-img {
+        width: 100%;
+        order: 2;
+        text-align: center;
+    }
+
+    .about-img img {
+        width: 250px;
+    }
+
+    .information {
+        padding: 20px;
+        flex-direction: column;
+        margin-left: 70px;
+    }
+
+    .house {
+        flex-direction: column; 
+    }
+
+    .footer {
+        padding: 20px 20px 0 20px;
+    }
+
+    .footer-content {
+        flex-direction: column;
+    }
+
+    .footer-form {
+        width: 100%;
+        text-align: center;
+    }
+
+    .footer-txt {
+        text-align: center;
+        width: 100%;
+    }
+
+    .footer-txt h3 {
+        margin: 0 0 15px 0;
+    }
+
+    .form { 
+        width: 100%;
+        margin: 0 0 20px 0;
+        display: flex;
+    }
+
+    .footer-2 p {
+        text-align: center;
+    }
+}
+
+/* Estilos adicionales para pantallas móviles de menor tamaño */
+@media (max-width: 576px) {
+    .menu {
+        padding: 20px;
+    }
+
+    .header-txt h1 {
+        font-size: 40px;
+        line-height: 50px;
+    }
+
+    .about-img img {
+        width: 200px;
+    }
+}
+
+/* Estilos adicionales para pantallas móviles de mayor tamaño */
+@media (max-width: 1200px) {
+    .header-txt h1 {
+        font-size: 80px;
+        line-height: 90px;
+    }
+
+    .about-img img {
+        width: 400px;
+    }
+}
+
+/* Estilos adicionales para pantallas móviles de muy pequeño tamaño */
+@media (max-width: 320px) {
+    .menu {
+        padding: 10px;
+    }
+
+    .header-txt h1 {
+        font-size: 30px;
+        line-height: 40px;
+    }
+
+    .about-img img {
+        width: 150px;
     }
 }
 
