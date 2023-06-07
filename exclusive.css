@@ -539,6 +539,125 @@ html {
     }
   }
 
+  @media (max-width: 360px) {
+    .menu {
+        padding: 15px;
+    }
+
+    .menu label {
+        display: initial;
+    }
+
+    .menu .navbar {
+        position: absolute;
+        top: 100%;
+        left: 0;
+        right: 0;
+        background-color: #000000;
+        display: none;
+    }
+
+    .menu .navbar ul li {
+        width: 100%;
+    }
+
+    #menu:checked ~ .navbar {
+        display: initial;
+    }
+
+    .header {
+        min-height: 0vh;
+    }
+
+    .header-content {
+        padding: 50px 15px;
+    }
+
+    .header-txt {
+        width: 100%;
+        text-align: center;
+    }
+
+    .header-txt h1 {
+        font-size: 50px;
+        line-height: 60px;
+    }
+
+    .direction {
+        flex-direction: column;
+        text-align: center;
+        padding: 15px;
+    }
+
+    .direction p {
+        margin-bottom: 10px;
+    }
+
+    .about {
+        padding: 0 15px 15px 15px;
+        flex-direction: column;
+    }
+
+    .about-txt {
+        width: 100%;
+        text-align: center;
+        margin-bottom: 15px;
+    }
+
+    .about-img {
+        width: 100%;
+        order: 2;
+        text-align: center;
+    }
+
+    .about-img img {
+        width: 200px;
+    }
+
+    .information {
+        padding: 15px;
+        flex-direction: column;
+        margin-left: 60px;
+    }
+
+    .house {
+        flex-direction: column; 
+    }
+
+    .footer {
+        padding: 15px 15px 0 15px;
+    }
+
+    .footer-content {
+        flex-direction: column;
+    }
+
+    .footer-form {
+        width: 100%;
+        text-align: center;
+    }
+
+    .footer-txt {
+        text-align: center;
+        width: 100%;
+    }
+
+    .footer-txt h3 {
+        margin: 0 0 10px 0;
+    }
+
+    .form { 
+        width: 100%;
+        margin: 0 0 15px 0;
+        display: flex;
+    }
+
+    .footer-2 p {
+        text-align: center;
+    }
+}
+
+
 
 
 
