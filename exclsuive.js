@@ -22,3 +22,24 @@ comprarBtn.addEventListener("click", function() {
   // Aquí puedes agregar la acción que deseas realizar al hacer clic en el botón
   // Por ejemplo, redireccionar a una página de compra o realizar alguna otra acción
   window.location.href = "https://www.instagram.com/iphonexclusivecba/";});
+
+
+
+
+
+
+  $(window).on('scroll', function() {
+    $('.house-1').each(function() {
+        if (isElementInViewport($(this))) {
+            $(this).addClass('show');
+        }
+    });
+});
+
+function isElementInViewport(element) {
+    var rect = element[0].getBoundingClientRect();
+    return (
+        rect.top >= 0 &&
+        rect.bottom <= (window.innerHeight || document.documentElement.clientHeight)
+    );
+}

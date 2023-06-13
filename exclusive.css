@@ -1,8 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@800&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@700&display=swap');
-
-
+@import url('https://fonts.googleapis.com/css2?family=Sen&display=swap');
 
 
 *{
@@ -15,13 +14,10 @@
 
 
 
-
-
-
 html{
     font-size: 20px;
     font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-    background-color: rgb(0, 0, 0);
+    background: linear-gradient(to bottom, rgb(225, 208, 158), #893d3d);
 }
 
 p{
@@ -34,16 +30,18 @@ p{
 }
 
 .header{
-    background-image: linear-gradient(
+    background-image: linear-gradienT(
         rgba(0, 0, 0, 0.5),
-        rgba(0, 0, 0, 0.5)),
-        url(images/OJO.png);
+        rgba(225, 208, 158, 0.274)),
+        url(images/men.png);
     background-position: center center;
     background-repeat: no-repeat;
     background-size: cover;
     min-height: 70vh;
     display: flex;
     align-items: center;
+    opacity: 0;
+    animation: fade-in 3s forwards;
 }
 
 .menu{
@@ -126,6 +124,9 @@ p{
     margin-bottom: 180px;
 }
 
+
+
+
 .btn-1:hover{
     background-color: #643535;
 }
@@ -138,19 +139,60 @@ p{
 
 .direction.container p{
     font-family: 'Bebas Neue', sans-serif;
-    color: #000000;
-    border: 1px solid #555555; /* Cambia el color y el grosor del borde según tus preferencias */
-    padding: 12px;
-    background-color: #ffffff;
-    border-radius: 20px;
-    font-size: 20px;
-   
+  color: #555555;
+  padding: 12px;
+  font-size: 20px;
+  animation-name: fadeAnimation;
+  animation-duration: 2s;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
 }
+
+@keyframes fadeAnimation {
+  0% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.5;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+.highlight {
+
+    color: #d03d3d9e;
+  }
+
+
+.direction.container {
+    Opacity: 0;
+    animation: fade-in 6s forwards;
+
+}
+
+@keyframes fade-in {
+    0% {
+      opacity: 0;
+    }
+    100% {
+      opacity: 1;
+    }
+  }
+
+
+
 
 .direction p {
     color: #000000;
     font-size: 16px;
 }
+
+.direction.container p a {
+    color: black;
+  }
+  
 
 .about {
     padding: 100px 0;
@@ -170,13 +212,14 @@ p{
 }
 
 .about-txt h2{
-    color: #ffffff;
+    color: #b33d3d;
 }
 
 .about-txt p{
-    font-size: 19px;
+    font-size: 20px;
     color: #ffffff;
     margin-bottom: 6px;
+    font-family: 'Sen', sans-serif;
 }
 
 h2 {
@@ -222,20 +265,26 @@ h2 {
     background-image: linear-gradient(
         rgba(0, 0, 0, 0.5),
         rgba(0, 0, 0, 0.5)),
-        url(images/14banner.png);
+        url(images/iphone\ 14.png);
     background-position: center center;
     background-repeat: no-repeat;
     background-size: cover;
     height: 500px;
     width: 100%;
     padding: 25px;
+    transition: opacity 1s ease-in-out;
 }
+
+.house-1.show {
+    opacity: 1;
+}
+
 
 .house-2{
     background-image: linear-gradient(
         rgba(0, 0, 0, 0.5),
         rgba(0, 0, 0, 0.5)),
-        url(images/13banner.png);
+        url(images/iphone\ 13.png);
     background-position: center center;
     background-repeat: no-repeat;
     background-size: cover;
@@ -248,7 +297,7 @@ h2 {
     background-image: linear-gradient(
         rgba(0, 0, 0, 0.5),
         rgba(0, 0, 0, 0.5)),
-        url(images/12banner.png);
+        url(images/iphone\ 12.png);
     background-position: center center;
     background-repeat: no-repeat;
     background-size: cover;
@@ -261,7 +310,7 @@ h2 {
     background-image: linear-gradient(
         rgba(0, 0, 0, 0.5),
         rgba(0, 0, 0, 0.5)),
-        url(images/11banner.png);
+        url(images/iphone\ 11.png);
     background-position: center center;
     background-repeat: no-repeat;
     background-size: cover;
@@ -427,7 +476,19 @@ html {
 
     .header {
         min-height: 0vh;
+        opacity: 0;
+        animation: fade-in 4s forwards;
     }
+
+    @keyframes fade-in {
+        0% {
+          opacity: 0;
+        }
+        100% {
+          opacity: 1;
+        }
+      }
+
 
     .header-content {
         padding: 100px 30px;
@@ -439,9 +500,22 @@ html {
     }
 
     .header-txt h1 {
-        font-size: 70px;
+        font-size: 45px;
         line-height: 80px;
+        opacity: 0;
+        animation: fade-in 6s forwards;
     }
+
+    @keyframes fade-in {
+        0% {
+          opacity: 0;
+        }
+        100% {
+          opacity: 1;
+        }
+      }
+
+
 
     .direction {
         flex-direction: column;
@@ -449,9 +523,21 @@ html {
         padding: 30px;
     }
 
+
+
     .direction p {
         margin-bottom: 10px;
     }
+
+    .direction.container p{
+        font-size: 15px;
+        
+    }
+    
+    .direction.container p a {
+        color: black;
+      }
+      
 
     .about {
         padding: 0 30px 30px 30px;
@@ -462,6 +548,30 @@ html {
         width: 100%;
         text-align: center;
         margin-bottom: 25px;
+        opacity: 0;
+        animation: fade-in 9s forwards;
+    }
+
+    @keyframes fade-in {
+        0% {
+          opacity: 0;
+        }
+        100% {
+          opacity: 1;
+        }
+      }
+
+      
+
+
+    
+    .about-txt h2 {
+        font-size: 40px;
+        color: #972121;
+    }
+
+    .about-txt p {
+        font-size: 15px;
     }
 
     .about-img {
@@ -478,6 +588,7 @@ html {
         padding: 30px;
         flex-direction: column;
         margin-left: 80px;
+        
     }
 
     .house {
