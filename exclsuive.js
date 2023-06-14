@@ -43,3 +43,5 @@ function isElementInViewport(element) {
         rect.bottom <= (window.innerHeight || document.documentElement.clientHeight)
     );
 }
+
+

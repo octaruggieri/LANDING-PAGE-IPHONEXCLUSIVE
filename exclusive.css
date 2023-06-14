@@ -4,7 +4,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Sen&display=swap');
 
 
-*{
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
@@ -14,25 +14,25 @@
 
 
 
-html{
+
+html {
     font-size: 20px;
     font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
     background: linear-gradient(to bottom, rgb(225, 208, 158), #893d3d);
 }
 
-p{
-   font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+p {
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
 }
 
-.container{
+.container {
     max-width: 1200px;
     margin: 0 auto;
 }
 
-.header{
-    background-image: linear-gradienT(
-        rgba(0, 0, 0, 0.5),
-        rgba(225, 208, 158, 0.274)),
+.header {
+    background-image: linear-gradienT(rgba(0, 0, 0, 0.5),
+            rgba(225, 208, 158, 0.274)),
         url(images/men.png);
     background-position: center center;
     background-repeat: no-repeat;
@@ -41,10 +41,10 @@ p{
     display: flex;
     align-items: center;
     opacity: 0;
-    animation: fade-in 3s forwards;
+    animation: fade-in 2s forwards;
 }
 
-.menu{
+.menu {
     position: absolute;
     top: 0;
     left: 0;
@@ -52,62 +52,129 @@ p{
     display: flex;
     align-items: center;
     justify-content: space-between;
+    
 }
 
 .logo img {
-    width:75px; /* Ajusta el ancho según tus necesidades */
+    width: 65px;
+    /* Ajusta el ancho según tus necesidades */
+    animation: bounce 4s infinite;
+}
+
+
+@keyframes bounce {
+    0% {
+      transform: translateY(0);
+    }
+    50% {
+      transform: translateY(-10px);
+    }
+    100% {
+      transform: translateY(0);
+    }
   }
-  
-  .menu.container {
+
+
+
+.menu.container {
     display: flex;
     align-items: center;
-  }
-  
-  .logo {
-    margin-right: 20px; /* Ajusta el margen según tus necesidades */
-  }
+}
+
+.logo {
+    margin-right: 100px;
+    /* Ajusta el margen según tus necesidades */
+}
+
+
+.menu .navbar ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.2s ease-in-out;
+    position: absolute;
+    top: 100%;
+    margin-top: -40px;
+    left: 160px;
+    background-color: #000000ec; /* Cambia el color de fondo según tus necesidades */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Cambia la sombra según tus necesidades */
+    border-radius: 30px ;
+    z-index: 1;
+}
+
+
 
 .menu .navbar ul li {
     position: relative;
     float: left;
+   
+    
 }
 
-.menu .navbar ul li a{
-   font-size: 20px;
-   padding: 20px;
-   color: #ffffff;
-   display: block;
+.menu .navbar ul li a {
+    font-size: 20px;
+    padding: 20px;
+    color: #ffffff;
+    display: block;
+    transition: transform 0.6s ease-in-out;
+    justify-content: center;
+    display: flex;
+    font-size: 1.2rem;
 }
 
-.menu .navbar ul li a:hover{
-    color: #9d4949;
+.menu .navbar ul li.active a {
+    color: rgb(241, 204, 102);
+    font-weight: 600;
 }
 
 #menu {
     display: none;
 }
 
-.menu-icono{
-    width: 25px;
-}
 
-.menu label{
+.menu label {
     cursor: pointer;
     display: none;
 }
 
-.header-txt{
+.menu .navbar label {
+    display: block;
+  }
+  
+  #menu:checked ~ .navbar ul {
+    opacity: 1;
+    visibility: visible;
+  }
+
+  #menu:checked ~ .navbar ul li {
+    animation: fadeIn 0.80s ease-in-out forwards;
+  }
+  
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+      transform: translateY(-20px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+.header-txt {
     width: 100%;
 }
 
-.header-txt h1{
+.header-txt h1 {
     font-size: 100px;
     line-height: 70px;
     color: #ffffff;
     margin-bottom: 15px;
 }
 
-.header-txt p{
+.header-txt p {
     font-size: 16px;
     color: #E0E0E0;
     margin-bottom: 6px;
@@ -115,7 +182,7 @@ p{
 
 .btn-1 {
     display: inline-block;
-    padding: 5px 20px ;
+    padding: 5px 20px;
     background-color: #af3e3e;
     color: #fefcfb;
     border-radius: 25px;
@@ -127,7 +194,7 @@ p{
 
 
 
-.btn-1:hover{
+.btn-1:hover {
     background-color: #643535;
 }
 
@@ -135,35 +202,43 @@ p{
     display: flex;
     justify-content: space-between;
     padding: 40px 0;
+    opacity: 0;
+    animation: fade-in 5s forwards;
 }
 
-.direction.container p{
-    font-family: 'Bebas Neue', sans-serif;
-  color: #555555;
-  padding: 12px;
-  font-size: 20px;
-  animation-name: fadeAnimation;
-  animation-duration: 2s;
-  animation-iteration-count: infinite;
-  animation-direction: alternate;
+
+
+.direction.container p {
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    color: #555555;
+    padding: 12px;
+    font-size: 20px;
+    animation-name: fadeAnimation;
+    animation-duration: 2s;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+    opacity: 0;
+    animation: fade-in 2s forwards;
 }
 
 @keyframes fadeAnimation {
-  0% {
-    opacity: 1;
-  }
-  50% {
-    opacity: 0.5;
-  }
-  100% {
-    opacity: 1;
-  }
+    0% {
+        opacity: 1;
+    }
+
+    50% {
+        opacity: 0.5;
+    }
+
+    100% {
+        opacity: 1;
+    }
 }
 
 .highlight {
 
-    color: #d03d3d9e;
-  }
+    color: #ca67679e;
+}
 
 
 .direction.container {
@@ -174,12 +249,13 @@ p{
 
 @keyframes fade-in {
     0% {
-      opacity: 0;
+        opacity: 0;
     }
+
     100% {
-      opacity: 1;
+        opacity: 1;
     }
-  }
+}
 
 
 
@@ -191,12 +267,14 @@ p{
 
 .direction.container p a {
     color: black;
-  }
-  
+}
+
 
 .about {
     padding: 100px 0;
     display: flex;
+    opacity: 0;
+    animation: fade-in 2s forwards;
 }
 
 .about-txt {
@@ -205,17 +283,28 @@ p{
 
 .about-img {
     width: 50%;
+    opacity: 0;
+    animation: fade-in 4s forwards, bounce 0.8s infinite alternate;
+}
+
+@keyframes bounce {
+    0% {
+        transform: translateY(0);
+    }
+    100% {
+        transform: translateY(-20px);
+    }
 }
 
 .about-img img {
     width: 450px;
 }
 
-.about-txt h2{
+.about-txt h2 {
     color: #b33d3d;
 }
 
-.about-txt p{
+.about-txt p {
     font-size: 20px;
     color: #ffffff;
     margin-bottom: 6px;
@@ -228,11 +317,47 @@ h2 {
     margin-bottom: 15px;
 }
 
-.information {
-    display: flex;
-    justify-content: space-between;
-    padding: 50px 0;
+
+
+@keyframes slide-in {
+    0% {
+        opacity: 0;
+        transform: translateX(-50%);
+    }
+    100% {
+        opacity: 1;
+        transform: translateX(0);
+    }
 }
+
+.information {
+    display: inline-block;
+    justify-content: center;
+    align-items: center center;
+    padding: 30px 0;
+    opacity: 0;
+    animation: slide-in 5s forwards;
+    
+}
+
+.button-link {
+    margin-top: 10px;
+    display: inline-block;
+    padding: 6px 15px;
+    right: 10px;
+    background-color: #e04646be;
+    color: #ffffff;
+    text-decoration: none;
+    border-radius: 60px;
+    transition: background-color 0.3s ease;
+    align-items: center;
+   
+  }
+  
+  .button-link:hover {
+    background-color: #dfda94;
+  }
+
 
 .information-1 {
     display: flex;
@@ -246,11 +371,11 @@ h2 {
 
 
 .information-1 h3 {
-    font-size: 35px;
+    font-size: 28px;
     color: #000000;
 }
 
-.information-1 p{
+.information-1 p {
     font-size: 20px;
     color: #000000;
     margin-left: 15px;
@@ -259,12 +384,13 @@ h2 {
 .house {
     display: flex;
     justify-content: space-between;
+    opacity: 0;
+    animation: fade-in 4s forwards;
 }
 
-.house-1{
-    background-image: linear-gradient(
-        rgba(0, 0, 0, 0.5),
-        rgba(0, 0, 0, 0.5)),
+.house-1 {
+    background-image: linear-gradient(rgba(0, 0, 0, 0),
+            rgba(0, 0, 0, 0)),
         url(images/iphone\ 14.png);
     background-position: center center;
     background-repeat: no-repeat;
@@ -279,11 +405,32 @@ h2 {
     opacity: 1;
 }
 
+.comprar-button {
+    font-size: 16px;
+    color: #ffffff;
+    text-decoration: none;
+    border-radius: 30px;
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #ebd694;
+    color: #000;
+    transition: background-color 0.3s ease;
+    position: absolute;
+    top: 400px;
+    left: 0;
+    rotate: 270deg;
+}
 
-.house-2{
-    background-image: linear-gradient(
-        rgba(0, 0, 0, 0.5),
-        rgba(0, 0, 0, 0.5)),
+
+
+.comprar-button:hover {
+    background-color: #ffffff;
+}
+
+
+.house-2 {
+    background-image: linear-gradient(rgba(0, 0, 0, 0),
+            rgba(0, 0, 0, 0)),
         url(images/iphone\ 13.png);
     background-position: center center;
     background-repeat: no-repeat;
@@ -293,10 +440,9 @@ h2 {
     padding: 25px;
 }
 
-.house-3{
-    background-image: linear-gradient(
-        rgba(0, 0, 0, 0.5),
-        rgba(0, 0, 0, 0.5)),
+.house-3 {
+    background-image: linear-gradient(rgba(0, 0, 0, 0),
+            rgba(0, 0, 0, 0)),
         url(images/iphone\ 12.png);
     background-position: center center;
     background-repeat: no-repeat;
@@ -306,10 +452,9 @@ h2 {
     padding: 25px;
 }
 
-.house-4{
-    background-image: linear-gradient(
-        rgba(0, 0, 0, 0.5),
-        rgba(0, 0, 0, 0.5)),
+.house-4 {
+    background-image: linear-gradient(rgba(0, 0, 0, 0),
+            rgba(0, 0, 0, 0)),
         url(images/iphone\ 11.png);
     background-position: center center;
     background-repeat: no-repeat;
@@ -319,11 +464,10 @@ h2 {
     padding: 25px;
 }
 
-.house-5{
-    background-image: linear-gradient(
-        rgba(0, 0, 0, 0.5),
-        rgba(0, 0, 0, 0.5)),
-        url(images/macboock.png);
+.house-5 {
+    background-image: linear-gradient(rgba(0, 0, 0, 0),
+            rgba(0, 0, 0, 0)),
+        url(images/macbook.png);
     background-position: center center;
     background-repeat: no-repeat;
     background-size: cover;
@@ -332,11 +476,10 @@ h2 {
     padding: 25px;
 }
 
-.house-6{
-    background-image: linear-gradient(
-        rgba(0, 0, 0, 0.5),
-        rgba(0, 0, 0, 0.5)),
-        url(images/applewaychbanner.png);
+.house-6 {
+    background-image: linear-gradient(rgba(0, 0, 0, 0),
+            rgba(0, 0, 0, 0.1)),
+        url(images/applewatch.png);
     background-position: center center;
     background-repeat: no-repeat;
     background-size: cover;
@@ -349,7 +492,7 @@ h2 {
     position: relative;
 }
 
-.txt h3{
+.txt h3 {
     color: #ffffff;
     font-size: 35px;
 }
@@ -362,6 +505,7 @@ h2 {
     left: 0;
     rotate: 270deg;
 }
+
 
 .footer {
     padding: 100px 0 0 0;
@@ -378,7 +522,7 @@ h2 {
 
 
 .footer-form h2 {
-    color: #ffffff;
+    color: #eecd87;
     font-size: 40px;
     margin-top: 20px;
     margin-right: 150px;
@@ -388,7 +532,7 @@ h2 {
     width: 50%;
 }
 
-form{
+form {
     display: flex;
     width: 350px;
     flex-direction: column;
@@ -409,28 +553,49 @@ form{
     color: #000000;
 }
 
-.btn-2{
+.btn-2 {
     padding: 17px 35px;
-    border: 2px solid #7e3b3b;
-    background-color: #7e3b3b;
+    border: 2px solid #f8f8f8;
+    background-color: #d854548c;
     color: #fefcfb;
     border-radius: 25px;
     text-transform: uppercase;
+    font-weight: bold;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
 }
+
 
 .footer-txt h3 {
     color: #ffffff;
-    font-size: 30px;
+    font-size: 20px;
     margin: 0 100px 20px 0;
 }
 
-.footer-txt p{
+.whatsapp-button {
+    display: inline-block;
+    padding: 6px 14px;
+    background-color: #59a029;
+    color: #ffffff;
+    text-decoration: none;
+    border-radius: 100px;
+    transition: background-color 0.3s ease;
+    text-align: center;
+    
+    
+}
+
+.whatsapp-button:hover {
+    background-color: #56bb58;
+}
+
+
+.footer-txt p {
     margin-bottom: 25px;
     font-size: 20px;
     color: #ffffff;
 }
 
-.footer-2 p{
+.footer-2 p {
     padding: 50px 0;
     text-align: center;
     font-size: 2px;
@@ -470,7 +635,7 @@ html {
         width: 100%;
     }
 
-    #menu:checked ~ .navbar {
+    #menu:checked~.navbar {
         display: initial;
     }
 
@@ -482,12 +647,13 @@ html {
 
     @keyframes fade-in {
         0% {
-          opacity: 0;
+            opacity: 0;
         }
+
         100% {
-          opacity: 1;
+            opacity: 1;
         }
-      }
+    }
 
 
     .header-content {
@@ -508,12 +674,13 @@ html {
 
     @keyframes fade-in {
         0% {
-          opacity: 0;
+            opacity: 0;
         }
+
         100% {
-          opacity: 1;
+            opacity: 1;
         }
-      }
+    }
 
 
 
@@ -529,15 +696,15 @@ html {
         margin-bottom: 10px;
     }
 
-    .direction.container p{
+    .direction.container p {
         font-size: 15px;
-        
+
     }
-    
+
     .direction.container p a {
         color: black;
-      }
-      
+    }
+
 
     .about {
         padding: 0 30px 30px 30px;
@@ -554,17 +721,18 @@ html {
 
     @keyframes fade-in {
         0% {
-          opacity: 0;
+            opacity: 0;
         }
+
         100% {
-          opacity: 1;
+            opacity: 1;
         }
-      }
-
-      
+    }
 
 
-    
+
+
+
     .about-txt h2 {
         font-size: 40px;
         color: #972121;
@@ -588,11 +756,11 @@ html {
         padding: 30px;
         flex-direction: column;
         margin-left: 80px;
-        
+
     }
 
     .house {
-       flex-direction: column; 
+        flex-direction: column;
     }
 
     .footer {
@@ -618,51 +786,95 @@ html {
         margin: 0 0 20px 0;
     }
 
-    .form { 
-       width: 100%;
-       margin: 0 0 25px 0;
-       display: flex;
+    .form {
+        width: 100%;
+        margin: 0 0 25px 0;
+        display: flex;
     }
 
-    .footer-2 p{
+    .footer-2 p {
         text-align: center;
     }
 
 
 }
 
+@media screen and (max-width: 900px) {
+    .navbar {
+        padding: 0;
+    }
+
+    .menu label .i {
+        display: block;
+    }
+    
+    .menu .navbar ul {
+        top: 0px;
+        left: 0;
+        position: absolute;
+        background-color: #00000065;
+        backdrop-filter: blur(10px);
+        width: 100%;
+        height: 58vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        animation: slideIn 1s ease;
+    }
+
+    .header .nav-links.mobile-menu {
+        animation: slideOut 2s ease;
+    }
+    .navbar ul {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .navbar ul li {
+        margin: 7px 0;
+        font-size: 3rem;
+    }
+
+    @keyframes slideIn {
+        0% {
+            transform: translateX(-100%);
+        }
+        100% {
+            transform: translateX(0%);
+        }
+    }
+
+    @keyframes slideOut {
+        0% {
+            transform: translateX(0%);
+        }
+        100% {
+            transform: translateX(-100%);
+        }
+    }
+}
+    
+
+
 @media (max-width: 768px) {
     .footer-content {
-      flex-direction: column;
-      align-items: center;
-      text-align: center;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
     }
-  
+
     .footer-form {
-      width: 100%;
-      margin: 50px 0;
+        width: 100%;
+        margin: 50px 0;
     }
-  
+
     .footer-form h2 {
-      margin-right: 0;
+        margin-right: 0;
     }
-  
+
     form {
-      width: 100%;
-      margin-left: 0;
+        width: 100%;
+        margin-left: 0;
     }
-  }
-
-
-
-
-
-
-
-
-  
-
-
-
-
-
+}
