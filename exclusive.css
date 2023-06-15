@@ -381,16 +381,41 @@ h2 {
     margin-left: 15px;
 }
 
+@keyframes zoom {
+    0% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.1);
+    }
+    100% {
+        transform: scale(1);
+    }
+}
+
+@keyframes zoom {
+    0% {
+        transform: scale(0.9);
+    }
+    50% {
+        transform: scale(1);
+    }
+    100% {
+        transform: scale(0.9);
+    }
+}
+
+
 .house {
     display: flex;
     justify-content: space-between;
-    opacity: 0;
-    animation: fade-in 4s forwards;
+    opacity: 1;
+    
 }
 
 .house-1 {
-    background-image: linear-gradient(rgba(0, 0, 0, 0),
-            rgba(0, 0, 0, 0)),
+    position: relative;
+    background-image: linear-gradient(rgba(0, 0, 0, 0), rgba(0, 0, 0, 0)),
         url(images/iphone\ 14.png);
     background-position: center center;
     background-repeat: no-repeat;
@@ -399,11 +424,26 @@ h2 {
     width: 100%;
     padding: 25px;
     transition: opacity 1s ease-in-out;
+    
+} 
+
+.house-1::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    border: 6px solid #dfda94;
+    box-shadow: 0 0 20px rgba(145, 68, 68, 0.836);
+    z-index: -1;
+    border-radius: 20px 20px 0 0;
 }
 
 .house-1.show {
     opacity: 1;
 }
+
 
 .comprar-button {
     font-size: 16px;
@@ -416,21 +456,17 @@ h2 {
     color: #000;
     transition: background-color 0.3s ease;
     position: absolute;
-    top: 400px;
-    left: 0;
-    rotate: 270deg;
+    bottom: 10px;
+    right: 10px;
 }
-
-
 
 .comprar-button:hover {
     background-color: #ffffff;
 }
 
-
 .house-2 {
-    background-image: linear-gradient(rgba(0, 0, 0, 0),
-            rgba(0, 0, 0, 0)),
+    position: relative;
+    background-image: linear-gradient(rgba(0, 0, 0, 0), rgba(0, 0, 0, 0)),
         url(images/iphone\ 13.png);
     background-position: center center;
     background-repeat: no-repeat;
@@ -438,11 +474,25 @@ h2 {
     height: 500px;
     width: 100%;
     padding: 25px;
+    transition: opacity 1s ease-in-out;
+    
+}
+
+.house-2::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    border: 6px solid #dfda94;
+    box-shadow: 0 0 10px rgba(94, 74, 74, 0.3);
+    z-index: -1;
 }
 
 .house-3 {
-    background-image: linear-gradient(rgba(0, 0, 0, 0),
-            rgba(0, 0, 0, 0)),
+    position: relative;
+    background-image: linear-gradient(rgba(0, 0, 0, 0), rgba(0, 0, 0, 0)),
         url(images/iphone\ 12.png);
     background-position: center center;
     background-repeat: no-repeat;
@@ -450,11 +500,24 @@ h2 {
     height: 500px;
     width: 100%;
     padding: 25px;
+    transition: opacity 1s ease-in-out;
+}
+
+.house-3::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    border: 6px solid #dfda94;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+    z-index: -1;
 }
 
 .house-4 {
-    background-image: linear-gradient(rgba(0, 0, 0, 0),
-            rgba(0, 0, 0, 0)),
+    position: relative;
+    background-image: linear-gradient(rgba(0, 0, 0, 0), rgba(0, 0, 0, 0)),
         url(images/iphone\ 11.png);
     background-position: center center;
     background-repeat: no-repeat;
@@ -462,11 +525,25 @@ h2 {
     height: 500px;
     width: 100%;
     padding: 25px;
+    transition: opacity 1s ease-in-out;
+    
+}
+
+.house-4::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    border: 6px solid #dfda94;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+    z-index: -1;
 }
 
 .house-5 {
-    background-image: linear-gradient(rgba(0, 0, 0, 0),
-            rgba(0, 0, 0, 0)),
+    position: relative;
+    background-image: linear-gradient(rgba(0, 0, 0, 0), rgba(0, 0, 0, 0)),
         url(images/macbook.png);
     background-position: center center;
     background-repeat: no-repeat;
@@ -474,11 +551,25 @@ h2 {
     height: 500px;
     width: 100%;
     padding: 25px;
+    transition: opacity 1s ease-in-out;
+    
+}
+
+.house-5::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    border: 6px solid #dfda94;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+    z-index: -1;
 }
 
 .house-6 {
-    background-image: linear-gradient(rgba(0, 0, 0, 0),
-            rgba(0, 0, 0, 0.1)),
+    position: relative;
+    background-image: linear-gradient(rgba(0, 0, 0, 0), rgba(0, 0, 0, 0)),
         url(images/applewatch.png);
     background-position: center center;
     background-repeat: no-repeat;
@@ -486,6 +577,30 @@ h2 {
     height: 500px;
     width: 100%;
     padding: 25px;
+    transition: opacity 1s ease-in-out;
+    
+}
+
+.house-6::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    border: 6px solid #dfda94;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+    z-index: -1;
+    border-radius: 0 0 25px 25px;
+}
+
+@keyframes fade {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
 }
 
 .txt {
